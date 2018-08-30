@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+
+!.bashrc
+!.vimrc
+
+!.vim/colors/*
