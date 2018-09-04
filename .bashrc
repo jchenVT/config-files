@@ -116,16 +116,26 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#adding nvcc (nviida stuff)
+export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}$ 
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
 #bash prompt
 export PS1="\[\033[38;5;76m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\\$\[$(tput sgr0)\] "
+
+#xdg (i3 stuff) home 
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 
 #allows fuck to wor
 eval $(thefuck --alias)
 
 #cd aliases
 alias ..='cd ..'
-alias ..='cd ../../'
-alias cddown='cd Downloads'
+alias ...='cd ../../'
+alias cddown='cd ~/Downloads'
+
+alias ycmg='~/.vim/plugged/YCM-Generator/config_gen.py .'
 
 alias gs='git status'
 alias ga='git add'
@@ -137,3 +147,14 @@ alias update='sudo apt-get update | lolcat && sudo apt-get upgrade | lolcat'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias am='alsamixer'
+alias rr='ranger'
+
+#sleep alias that uses i3lock
+alias sleep='i3lock && echo mem > sudo /sys/power/state'
+
+#alias for brightness
+alias br='~/brightness_control.sh'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -7,9 +7,10 @@ Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'git://git.wincent.com/command-t.git'
 Plug 'Valloric/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -57,3 +58,4 @@ inoremap kj <esc>
 colorscheme jellybeans "shits amazing
 set nowrap
 syntax enable  " enable syntax processing
+

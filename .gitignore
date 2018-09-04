@@ -6,3 +6,5 @@
 !.vimrc
 
 !.vim/colors/*
+
+!ycm_config/*
