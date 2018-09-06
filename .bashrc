@@ -152,9 +152,12 @@ alias am='alsamixer'
 alias rr='ranger'
 
 #sleep alias that uses i3lock
-alias sleep='i3lock && echo mem > sudo /sys/power/state'
+alias sleep='betterlockscreen && echo mem > sudo /sys/power/state'
 
 #alias for brightness
 alias br='~/brightness_control.sh'
+
+#alias for searching file contents
+alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
