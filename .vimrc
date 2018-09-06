@@ -11,7 +11,8 @@ Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'roxma/ncm-clang'
+Plug 'jiangmiao/auto-pairs'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
