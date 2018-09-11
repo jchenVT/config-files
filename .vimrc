@@ -11,6 +11,7 @@ Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'roxma/ncm-clang'
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -59,4 +60,10 @@ inoremap kj <esc>
 colorscheme jellybeans "shits amazing
 set nowrap
 syntax enable  " enable syntax processing
+
+"backup stuff heres
+set backup 
+set writebackup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 

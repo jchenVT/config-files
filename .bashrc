@@ -134,6 +134,8 @@ eval $(thefuck --alias)
 alias ..='cd ..'
 alias ...='cd ../../'
 alias cddown='cd ~/Downloads'
+alias cddoc='cd ~/Documents'
+alias cdr='cd ~/repos'
 
 alias ycmg='~/.vim/plugged/YCM-Generator/config_gen.py .'
 
