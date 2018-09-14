@@ -154,12 +154,13 @@ alias am='alsamixer'
 alias rr='ranger'
 
 #sleep alias that uses i3lock
-alias sleep='betterlockscreen && echo mem > sudo /sys/power/state'
-
-#alias for brightness
-alias br='~/brightness_control.sh'
+alias sleep='i3lock && echo mem > sudo /sys/power/state'
 
 #alias for searching file contents
 alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 
+#this grabs aliases fro m.bashrc_aliases, wont be pushed to git repo ie local aliases
+if [ -f $HOME/.bashrc_aliases ]; then
+    . $HOME/.bashrc_aliases
+fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
