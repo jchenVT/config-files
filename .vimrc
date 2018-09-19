@@ -2,17 +2,25 @@
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
+" adds some basic vim functionality in case stuff breaks
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/seoul256.vim'
+" adds git functionality to vim, run all git commands
 Plug 'tpope/vim-fugitive'
-Plug 'git://git.wincent.com/command-t.git'
+" semantic autocompletion engine
 Plug 'Valloric/YouCompleteMe'
+" creates configuration files for YCM
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
+" Adds git functionality: shows new, deleted, and changed lines
 Plug 'airblade/vim-gitgutter'
+" highlights indents invim
 Plug 'nathanaelkane/vim-indent-guides'
+" fuzzy file completion, for vim and terminal
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'roxma/ncm-clang'
+"sandwich allows for adding/deleting/replacing (), [], {}, and more to surround text
+Plug 'machakann/vim-sandwich'
+"sleuth detects tabs or spaces and lenght and adjusts accordingly
+Plug 'tpope/vim-sleuth'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -31,6 +39,12 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 "let g:ycm_key_list_select_completion=[]
 "let g:ycm_key_list_previous_completion=[]
+
+"=========================================================
+"vim sandwich config
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+
+
 
 "===============================================================================
 "vim only stuff here
@@ -67,9 +81,20 @@ set writebackup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
+"=================================================================
 "This makes vim split stuff easier
 "This allows movement between vi split with CTRL+HJKL
+
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+"==============================================================
+"This auto expands opening brackets/parentheses
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap [ []<Esc>i
+
