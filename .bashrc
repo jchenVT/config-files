@@ -119,6 +119,7 @@ export NVM_DIR="$HOME/.nvm"
 #adding nvcc (nviida stuff)
 export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}$ 
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/snap/bin/${PATH:+:${PATH}}$ 
 
 
 #bash prompt
@@ -143,7 +144,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 
-alias update='sudo apt-get update | lolcat && sudo apt-get upgrade | lolcat'
+alias update='sudo apt update | lolcat && echo \n && sudo apt upgrade | lolcat'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -154,7 +155,7 @@ alias am='alsamixer'
 alias rr='ranger'
 
 #sleep alias that uses i3lock
-alias sleep='i3lock && echo mem > sudo /sys/power/state'
+alias sleep='~/sleep.sh'
 
 #alias for searching file contents
 alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
