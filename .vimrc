@@ -66,3 +66,10 @@ set backup
 set writebackup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
+
+"This makes vim split stuff easier
+"This allows movement between vi split with CTRL+HJKL
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
