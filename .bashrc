@@ -46,10 +46,10 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+  #We have color support; assume it's compliant with Ecma-48 (ISO/IEC-6429).
+  #(Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
 	color_prompt=yes
     else
 	color_prompt=
@@ -90,10 +90,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -138,7 +134,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 
-alias update='sudo apt update | lolcat && echo \n && sudo apt upgrade | lolcat'
+alias update='sudo apt update | lolcat && sudo apt upgrade | lolcat && sudo snap refresh'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -155,7 +151,7 @@ alias sleep='~/sleep.sh'
 alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 
 #this grabs aliases fro m.bashrc_aliases, wont be pushed to git repo ie local aliases
-if [ -f $HOME/.bashrc_aliases ]; then
-    . $HOME/.bashrc_aliases
+if [ -f $HOME/.bash_aliases ]; then
+    . $HOME/.bash_aliases
 fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
