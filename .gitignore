@@ -1,10 +1,8 @@
-*
-
-!.gitignore
+/*
 
 !.bashrc
 !.vimrc
+!.gitignore
 
-!.vim/colors/*
-
-!ycm_config/*
+!/.vim/colors/
+!/ycm_conf/
