@@ -44,8 +44,6 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 "vim sandwich config
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 
-
-
 "===============================================================================
 "vim only stuff here
 set autoindent
@@ -63,7 +61,6 @@ set showmatch "highlight something lol
 set incsearch "search as characters are etnered
 set hlsearch "highlights matches
 "so backspace is weird and this fixes taht? idk
-set backspace=indent,eol,start
 
 " jk is escape
 " escape is jk
@@ -71,7 +68,6 @@ set backspace=indent,eol,start
 inoremap jk <esc>
 inoremap JK <esc>
 inoremap kj <esc>
-colorscheme jellybeans "shits amazing
 set nowrap
 syntax enable  " enable syntax processing
 
@@ -81,6 +77,9 @@ set writebackup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
+"Colorscheme ==================================================="
+set background=light
+colorscheme adventurous "shits amazing
 "=================================================================
 "This makes vim split stuff easier
 "This allows movement between vi split with CTRL+HJKL
