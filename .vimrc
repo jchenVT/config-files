@@ -79,7 +79,7 @@ set directory=~/.vim/tmp
 
 "Colorscheme ==================================================="
 set background=light
-colorscheme adventurous "shits amazing
+colorscheme jellybeans "shits amazing
 "=================================================================
 "This makes vim split stuff easier
 "This allows movement between vi split with CTRL+HJKL

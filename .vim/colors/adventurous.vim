@@ -58,7 +58,7 @@ if &t_Co >= 256 || has('gui_running')
 
     set background=dark
 
-    hi Comment           ctermbg=NONE ctermfg=59   guibg=NONE    guifg=#404449 cterm=NONE           gui=italic
+    hi Comment           ctermbg=NONE ctermfg=59   guibg=NONE    guifg=#D7DBE0 cterm=NONE           gui=italic
     hi Constant          ctermbg=NONE ctermfg=32   guibg=NONE    guifg=#277BD3 cterm=NONE           gui=NONE
     hi Conditional       ctermbg=NONE ctermfg=214  guibg=NONE    guifg=#F5BB12 cterm=NONE           gui=NONE
     hi Number            ctermbg=NONE ctermfg=214  guibg=NONE    guifg=#F5BB12 cterm=NONE           gui=NONE
