@@ -144,6 +144,9 @@ alias l='ls -CF'
 alias am='alsamixer'
 alias rr='ranger'
 
+#build alias
+alias buildit="cmake ../ && make"
+
 #sleep alias that uses i3lock
 alias sleep='~/sleep.sh'
 
