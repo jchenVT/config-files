@@ -25,6 +25,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'itchyny/lightline.vim'
 "directory tree in vim"
 Plug 'scrooloose/nerdtree'
+"gruvbox colorscheme"
+Plug 'morhetz/gruvbox'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -82,21 +84,21 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 "Colorscheme ==================================================="
-set background=light
-colorscheme jellybeans "shits amazing
+set background=dark
+colorscheme gruvbox "switching to this vs jellybeans
 "=================================================================
 "This makes vim split stuff easier
 "This allows movement between vi split with CTRL+HJKL
 
+nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 "==============================================================
 "This auto expands opening brackets/parentheses
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
+"this annoying inoremap ( ()<Esc>i
+inoremap { {}<Esc>i<return><esc>O
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap [ []<Esc>i
