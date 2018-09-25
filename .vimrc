@@ -21,6 +21,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-sandwich'
 "sleuth detects tabs or spaces and lenght and adjusts accordingly
 Plug 'tpope/vim-sleuth'
+"adds cool statusline 
+Plug 'itchyny/lightline.vim'
+"directory tree in vim"
+Plug 'scrooloose/nerdtree'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
