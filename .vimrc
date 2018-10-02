@@ -103,3 +103,9 @@ inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 inoremap [ []<Esc>i
 
+"nerdtreeeasier==================================================
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Nt NERDTreeToggle
