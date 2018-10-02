@@ -118,7 +118,8 @@ export PS1="\[\033[38;5;76m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\
 #xdg (i3 stuff) home 
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 #setting the editor"
-export EDITOR="usr/bin/vim"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 #allows fuck to wor
 eval $(thefuck --alias)
@@ -156,7 +157,7 @@ alias sleep='~/sleep.sh'
 alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 
 #alias to use vimclip
-alias vimclip ='~/bin/vimclip'
+alias vimclip='bash /home/joseph/bin/vimclip'
 
 #this grabs aliases fro m.bashrc_aliases, wont be pushed to git repo ie local aliases
 if [ -f $HOME/.bash_aliases ]; then
