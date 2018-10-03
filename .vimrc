@@ -12,8 +12,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', {'branch': 'stable'}
 " Adds git functionality: shows new, deleted, and changed lines
 Plug 'airblade/vim-gitgutter'
-" highlights indents invim
-Plug 'nathanaelkane/vim-indent-guides'
 " fuzzy file completion, for vim and terminal
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -99,8 +97,6 @@ nnoremap <C-L> <C-W><C-L>
 "This auto expands opening brackets/parentheses
 "this annoying inoremap ( ()<Esc>i
 inoremap { {}<Esc>i<return><esc>O
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
 inoremap [ []<Esc>i
 
 "nerdtreeeasier==================================================
