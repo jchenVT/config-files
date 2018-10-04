@@ -57,14 +57,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -113,7 +105,7 @@ export PATH=/snap/bin/${PATH:+:${PATH}}$
 
 
 #bash prompt
-export PS1="\[\033[38;5;76m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\\$\[$(tput sgr0)\] "
+export PS1="\[\033[12;2;197m\]\w\[$(tput sgr0)\]\[\033[38;5;193m\] \[$(tput bold)\]\\$\[$(tput sgr0)\] "
 
 #xdg (i3 stuff) home 
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
