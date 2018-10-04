@@ -21,6 +21,8 @@ Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-sleuth'
 "adds cool statusline 
 Plug 'itchyny/lightline.vim'
+"buffer line plugin
+Plug 'ap/vim-buftabline'
 "directory tree in vim"
 Plug 'scrooloose/nerdtree'
 "gruvbox colorscheme"
