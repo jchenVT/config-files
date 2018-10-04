@@ -105,3 +105,4 @@ inoremap [ []<Esc>i
 :command W w
 :command Q q
 :command Nt NERDTreeToggle
+:command Fix :YcmCompleter FixIt
