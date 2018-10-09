@@ -143,7 +143,7 @@ alias rr='ranger'
 alias buildit="cmake ../ && make"
 
 #sleep alias that uses i3lock
-alias sleep='~/sleep.sh'
+alias sleep='~/bin/sleep.sh'
 
 #alias for searching file contents
 alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
