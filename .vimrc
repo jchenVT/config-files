@@ -84,7 +84,7 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 "Colorscheme ==================================================="
-set background=dark
+:let background = $BACKGROUND "this makes the dark vs light on colorscheme
 colorscheme gruvbox "switching to this vs jellybeans
 "=================================================================
 "This makes vim split stuff easier
