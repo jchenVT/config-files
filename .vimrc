@@ -1,7 +1,5 @@
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
-" Declare the list of plugins.
-" adds some basic vim functionality in case stuff breaks
+call plug#begin('~/.vim/plugged') " Declare the list of plugins.  adds some basic vim functionality in case stuff breaks
 Plug 'tpope/vim-sensible'
 " adds git functionality to vim, run all git commands
 Plug 'tpope/vim-fugitive'
@@ -68,8 +66,9 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 "Colorscheme ==================================================="
 colorscheme gruvbox "switching to this vs jellybeans
-set background=dark
-set background = bg "this makes the dark vs light on colorscheme
+set background=light
+let g:gruvbox_contrast_light = 'medium'
+let g:gruvbox_contrast_dark = 'medium'
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 "=================================================================
