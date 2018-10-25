@@ -40,6 +40,9 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 "vim sandwich config
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 "===============================================================================
+"this fixes tpp to be same as cpp
+autocmd BufEnter *.tpp :setlocal filetype=cpp
+"===============================================================================
 "vim only stuff here
 set autoindent
 set tabstop=4 "number of VISUAL spaces
@@ -57,6 +60,7 @@ set hlsearch "highlights matches
 inoremap jk <esc>
 inoremap JK <esc>
 inoremap kj <esc>
+inoremap <caps> <esc>
 set nowrap
 syntax enable  " enable syntax processing
 "backup stuff heres======================================================
@@ -82,7 +86,10 @@ nnoremap <C-L> <C-W><C-L>
 "This auto expands opening brackets/parentheses
 "this annoying inoremap ( ()<Esc>i
 inoremap { {}<Esc>i<return><esc>O
-inoremap [ []<Esc>i
+inoremap [[ []<Esc>i
+inoremap (( ()<Esc>i
+inoremap '' ''<Esc>i
+inoremap "" ""<Esc>i
 "nerdtreeeasier==================================================
 :command WQ wq
 :command Wq wq
