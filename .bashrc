@@ -153,7 +153,7 @@ alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 alias vimclip='bash /home/joseph/bin/vimclip'
 
 #this grabs aliases fro m.bashrc_aliases, wont be pushed to git repo ie local aliases
-if [ -f $HOME/.bash_aliases ]; then
-    . $HOME/.bash_aliases
+fi [-f ~/.bash_aliases]; then
+  source ~/.bash_aliases
 fi
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -z "$ZSH_NAME" ] && [ -f ~/.fzf.bash ] && source ~/.fzf.bash

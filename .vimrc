@@ -1,5 +1,6 @@
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged') " Declare the list of plugins.  adds some basic vim functionality in case stuff breaks
+"good default vim options
 Plug 'tpope/vim-sensible'
 " adds git functionality to vim, run all git commands
 Plug 'tpope/vim-fugitive'
@@ -16,7 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'machakann/vim-sandwich'
 "sleuth detects tabs or spaces and lenght and adjusts accordingly
 Plug 'tpope/vim-sleuth'
-"adds cool statusline 
+"adds cool statusline
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 "buffer line plugin
@@ -40,7 +41,7 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 "vim sandwich config
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 "===============================================================================
-"this fixes tpp to be same as cpp
+"this makes tpp to be same as cpp for syntax and ycm
 autocmd BufEnter *.tpp :setlocal filetype=cpp
 "===============================================================================
 "vim only stuff here
@@ -69,8 +70,9 @@ set writebackup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 "Colorscheme ==================================================="
+set termguicolors
 colorscheme gruvbox "switching to this vs jellybeans
-set background=light
+"set background=dark
 let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_contrast_dark = 'medium'
 let g:lightline = {}
