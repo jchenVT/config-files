@@ -72,7 +72,11 @@ set directory=~/.vim/tmp
 "Colorscheme ==================================================="
 set termguicolors
 colorscheme gruvbox "switching to this vs jellybeans
-set background=dark
+if system('hostname') + '' == 'phoenix'
+	set background=light	
+else 
+	set background=dark
+endif
 let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_contrast_dark = 'medium'
 let g:lightline = {}
@@ -87,7 +91,7 @@ nnoremap <C-L> <C-W><C-L>
 "==============================================================
 "This auto expands opening brackets/parentheses
 "this annoying inoremap ( ()<Esc>i
-inoremap { {}<Esc>i<return><esc>O
+inoremap {{ {}<Esc>i<return><esc>O
 inoremap [[ []<Esc>i
 inoremap (( ()<Esc>i
 inoremap '' ''<Esc>i
