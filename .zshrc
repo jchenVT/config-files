@@ -121,7 +121,6 @@ alias ycmg='~/.vim/plugged/YCM-Generator/config_gen.py .'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gp='git push'
 
 alias update='sudo apt update | lolcat && sudo apt upgrade | lolcat && sudo snap refresh'
 
