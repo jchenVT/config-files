@@ -72,7 +72,7 @@ set directory=~/.vim/tmp
 "Colorscheme ==================================================="
 set termguicolors
 colorscheme gruvbox "switching to this vs jellybeans
-"set background=dark
+set background=dark
 let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_contrast_dark = 'medium'
 let g:lightline = {}
