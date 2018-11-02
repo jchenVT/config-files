@@ -72,10 +72,11 @@ set directory=~/.vim/tmp
 "Colorscheme ==================================================="
 set termguicolors
 colorscheme gruvbox "switching to this vs jellybeans
-if system('hostname') + '' == 'phoenix'
-	set background=light	
-else 
+"checks whether desktop or laptop and sets dark or light accordingly
+if system('hostname')[:-2]  == 'mylongestyeahboiever'
 	set background=dark
+else 
+	set background=light
 endif
 let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_contrast_dark = 'medium'
