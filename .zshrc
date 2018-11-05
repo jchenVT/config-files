@@ -9,9 +9,13 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MODE='awesome-fontconfig'
 
+#FONTS STUFF
+source ~/.fonts/*.sh
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -144,6 +148,8 @@ alias fcfzf='grep --line-buffered --color=never -r "" * | fzf'
 #alias to use vimclip
 alias vimclip='bash /home/joseph/bin/vimclip'
 
+#alias to use get curl weather
+alias weather='curl wttr.in'
 #this grabs aliases fro m.bashrc_aliases, wont be pushed to git repo ie local aliases
 if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
